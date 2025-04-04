@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://eio7ja5lf8ja"]
+
+[ext_resource type="Script" uid="uid://ccyvogppudil8" path="res://Balloon Popper/balloon_manager.gd" id="1_hm4d0"]
+[ext_resource type="PackedScene" uid="uid://8nty5bgotyd1" path="res://Balloon Popper/balloon.tscn" id="2_bxkad"]
+
+[sub_resource type="Environment" id="Environment_4t30t"]
+background_mode = 1
+background_color = Color(0.4266, 0.54, 0.52677, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxkad"]
+font_size = 32
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_hm4d0")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.319301, 0.650203, 4.82192)
+fov = 41.3
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.159381, -0.964402, -0.211012, 0.472506, -0.113152, 0.874034, -0.866796, -0.239009, 0.437651, 0, 3.19062, 0)
+
+[node name="Background" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4t30t")
+
+[node name="Balloon" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710119, 0)
+
+[node name="Balloon2" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67538, 0.333162, 0.862692)
+
+[node name="Balloon3" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16343, 1.25674, -1.35659)
+
+[node name="Balloon4" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34376, 0, -1.27822)
+
+[node name="Balloon5" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.993691, -2.38419e-07, 0.867846)
+
+[node name="Balloon6" parent="." instance=ExtResource("2_bxkad")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19316, 1.6796, -4.85465)
+
+[node name="ScoreText" type="Label" parent="."]
+offset_left = 36.0
+offset_top = 27.0
+offset_right = 149.0
+offset_bottom = 69.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_bxkad")
