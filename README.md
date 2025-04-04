@@ -33,3 +33,13 @@ A 3D skiing game that uses the physics engine to move the character downhill as 
 	-Character Movement (mass, friction)
 	-Collision (rigid bodies)
 	-Signal Detection (reload scene on collions with trees)
+	
+## Loops
+
+### Summary
+A Godot scene that renders stars in space at random locations based on user input.
+
+### Concepts
+
+	-Loops (instantiate star objects using a for loop and a user defined paramter)
+	-Random (x and y coordinates, binding to camera restraints, scale)
